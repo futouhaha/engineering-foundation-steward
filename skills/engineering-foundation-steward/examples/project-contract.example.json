@@ -1,0 +1,138 @@
+{
+  "schema_version": "engineering.project-contract/v2",
+  "project_id": "demo-lending-station",
+  "revision": 1,
+  "project_root": "/workspace/demo-lending-station",
+  "identity_refs": [],
+  "context": {
+    "user_outcome": {
+      "value": "管理员登记借用并在重启后查回",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "primary_users": {
+      "value": "一名社团管理员",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "project_stage": {
+      "value": "有原型，未处理真实资料",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "data_and_side_effects": {
+      "value": "本阶段仅虚构借用记录",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "exposure": {
+      "value": "本机隔离演示",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "collaboration": {
+      "value": "一个主写者，独立审核只读",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    },
+    "current_action": {
+      "value": "准备隔离原型",
+      "basis": "reported",
+      "evidence_refs": [
+        "ev-user-1"
+      ]
+    }
+  },
+  "profile": {
+    "shape": "P2",
+    "rationale": "当前为持续本地工具；公开多人使用需重新画像",
+    "risk_flags": [
+      "future_personal_data_not_authorized"
+    ]
+  },
+  "autonomy": {
+    "requested": "A2",
+    "demonstrated": "unknown",
+    "evidence_refs": [],
+    "authority_refs": [],
+    "authority_note": "references_only_not_a_grant"
+  },
+  "source_bindings": [
+    {
+      "fact_kind": "task_status",
+      "locator": "TASKS.md",
+      "coverage": "拟复用已有任务入口，尚待核验",
+      "status": "unknown"
+    }
+  ],
+  "controls": [
+    {
+      "domain": "E03",
+      "control_id": "safe-version-baseline",
+      "implementation_target": "核实仓库归属与追踪范围后建立本地基线",
+      "timing": "now",
+      "reason": "后续持续修改需可追溯",
+      "trigger_condition": null,
+      "verify_by": "准确仓库、允许文件清单及提交事实",
+      "owner": "项目作者"
+    },
+    {
+      "domain": "E09",
+      "control_id": "real-data-recovery",
+      "implementation_target": "处理真实资料前验证适当恢复",
+      "timing": "later_when",
+      "reason": "当前只使用虚构数据，不提前宣称真实数据安全",
+      "trigger_condition": "开始使用真实资料或对外部署前",
+      "verify_by": "隔离恢复的实际证据",
+      "owner": "项目负责人"
+    }
+  ],
+  "trigger_bindings": [
+    {
+      "id": "route-1",
+      "mode": "project_routing",
+      "host_version": null,
+      "event": "task_start_and_closeout",
+      "state": "proposed",
+      "evidence_refs": [],
+      "disable_method": "获准后撤回本工具新增的路由引用；保留原项目规则"
+    }
+  ],
+  "open_questions": [
+    {
+      "question": "准确允许的实现目录和本地操作是否批准？",
+      "affects_actions": [
+        "isolated_prototype"
+      ],
+      "fallback": "只交付方案和候选Diff，不写项目"
+    }
+  ],
+  "recheck_when": [
+    "由本机改为公网",
+    "开始使用真实个人资料",
+    "第二名写者加入"
+  ],
+  "evidence": [
+    {
+      "id": "ev-user-1",
+      "kind": "user_statement",
+      "locator": "synthetic://dialogue/intake-1",
+      "version": null,
+      "observed_at": null,
+      "scope": "虚构用户说明，仅用于产品示例"
+    }
+  ],
+  "record_note": "engineering_adaptation_settings_not_task_ledger"
+}

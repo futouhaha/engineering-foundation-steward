@@ -1,0 +1,287 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "engineering.assessment/v2"
+    },
+    "assessment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "project_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "type": "string",
+      "enum": [
+        "kickoff",
+        "retrofit",
+        "milestone-charter",
+        "continuity-check"
+      ]
+    },
+    "observed_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "uncovered": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "control_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "type": "string",
+            "enum": [
+              "unknown",
+              "not_found_in_scope",
+              "documented_only",
+              "implemented_unwired",
+              "partially_verified",
+              "verified_in_scope"
+            ]
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "limitation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "control_id",
+          "state",
+          "evidence_refs",
+          "limitation"
+        ]
+      },
+      "minItems": 0
+    },
+    "readiness": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "for_action": {
+            "type": "string",
+            "enum": [
+              "discussion",
+              "read_only_audit",
+              "isolated_prototype",
+              "local_development",
+              "task_loop",
+              "stage_loop",
+              "real_data_operation",
+              "release",
+              "continuous_scheduling"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "ready",
+              "conditional",
+              "blocked",
+              "not_assessed"
+            ]
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "evidence_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "authorization": {
+            "type": "string",
+            "enum": [
+              "not_evaluated",
+              "missing",
+              "reference_requires_validation",
+              "verified_for_scope"
+            ]
+          },
+          "authorization_ref": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "for_action",
+          "status",
+          "reasons",
+          "evidence_refs",
+          "authorization",
+          "authorization_ref"
+        ]
+      },
+      "minItems": 0
+    },
+    "next_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "now",
+              "later_when",
+              "not_needed_now"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "affected_scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requires_approval": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "action",
+          "priority",
+          "reason",
+          "affected_scope",
+          "requires_approval"
+        ]
+      },
+      "minItems": 0
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "file",
+              "git",
+              "tool_result",
+              "user_statement",
+              "policy",
+              "other"
+            ]
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "observed_at": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "locator",
+          "version",
+          "observed_at",
+          "scope"
+        ]
+      },
+      "minItems": 0
+    },
+    "write_effects": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 0
+    },
+    "next_trigger": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "assessment_id",
+    "project_id",
+    "mode",
+    "observed_at",
+    "scope",
+    "uncovered",
+    "capabilities",
+    "readiness",
+    "next_actions",
+    "questions",
+    "evidence",
+    "write_effects",
+    "next_trigger"
+  ]
+}

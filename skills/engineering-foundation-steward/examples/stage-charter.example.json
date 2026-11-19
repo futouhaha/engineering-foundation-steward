@@ -1,0 +1,64 @@
+{
+  "schema_version": "engineering.stage-charter/v2",
+  "stage_id": "DEMO-STAGE-01",
+  "project_id": "demo-lending-station",
+  "status": "proposal_only",
+  "user_outcome": "虚构借用记录保存并在重启后读回",
+  "non_goals": [
+    "真实学生资料",
+    "公网",
+    "支付"
+  ],
+  "starting_sources": [
+    "ev-user-1"
+  ],
+  "allowed_paths": [
+    "候选目录需真实批准"
+  ],
+  "allowed_actions": [
+    "草案建议：范围内修改、隔离测试、普通返修"
+  ],
+  "tasks": [
+    {
+      "task_id": "DEMO-T1",
+      "outcome": "保存虚构记录",
+      "depends_on": [],
+      "may_continue_when": "满足真实阶段许可与本任务验收",
+      "acceptance": [
+        "存入和读回字段一致"
+      ]
+    },
+    {
+      "task_id": "DEMO-T2",
+      "outcome": "重启后读回",
+      "depends_on": [
+        "DEMO-T1"
+      ],
+      "may_continue_when": "前项技术结果可被阶段规则使用，不冒充人类接收",
+      "acceptance": [
+        "实际重启后读回一致"
+      ]
+    }
+  ],
+  "acceptance": [
+    "完整虚构用户场景通过",
+    "范围内回归无新增失败"
+  ],
+  "requires_new_approval": [
+    "真实数据",
+    "生产部署",
+    "权限扩大"
+  ],
+  "resources": "由真实用户与工具预算确定，不从示例生成",
+  "repair_limit": "草案建议有界返修，准确上限待批准",
+  "stop_conditions": [
+    "未知有副作用终态",
+    "超范围",
+    "重复失败无新证据"
+  ],
+  "state_sources": [
+    "ev-user-1"
+  ],
+  "handoff": "版本、证据、未完成项、下一步",
+  "approval_note": "draft_does_not_authorize_execution"
+}

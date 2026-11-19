@@ -1,0 +1,79 @@
+{
+  "schema_version": "engineering.assessment/v2",
+  "assessment_id": "synthetic-intake-001",
+  "project_id": "demo-lending-station",
+  "mode": "kickoff",
+  "observed_at": "2026-11-19T00:00:00Z",
+  "scope": "虚构访谈示例；没有实际读取仓库",
+  "uncovered": [
+    "仓库归属",
+    "运行环境",
+    "实际测试"
+  ],
+  "capabilities": [
+    {
+      "control_id": "safe-version-baseline",
+      "state": "verified_in_scope",
+      "evidence_refs": [],
+      "limitation": "仅收到产品描述，未查目录"
+    }
+  ],
+  "readiness": [
+    {
+      "for_action": "discussion",
+      "status": "ready",
+      "reasons": [
+        "已有可讨论的用户结果"
+      ],
+      "evidence_refs": [
+        "ev-user-1"
+      ],
+      "authorization": "not_evaluated",
+      "authorization_ref": null
+    },
+    {
+      "for_action": "isolated_prototype",
+      "status": "conditional",
+      "reasons": [
+        "需核根、范围及本地写入许可"
+      ],
+      "evidence_refs": [],
+      "authorization": "missing",
+      "authorization_ref": null
+    },
+    {
+      "for_action": "real_data_operation",
+      "status": "blocked",
+      "reasons": [
+        "不在本阶段范围且恢复未知"
+      ],
+      "evidence_refs": [],
+      "authorization": "missing",
+      "authorization_ref": null
+    }
+  ],
+  "next_actions": [
+    {
+      "action": "只读核实准确项目根和已有Git",
+      "priority": "now",
+      "reason": "避免重复建仓或覆盖他人资产",
+      "affected_scope": "用户确认的项目根",
+      "requires_approval": true
+    }
+  ],
+  "questions": [
+    "允许在哪个准确目录做只读检查？"
+  ],
+  "evidence": [
+    {
+      "id": "ev-user-1",
+      "kind": "user_statement",
+      "locator": "synthetic://dialogue/intake-1",
+      "version": null,
+      "observed_at": null,
+      "scope": "虚构用户说明，仅用于产品示例"
+    }
+  ],
+  "write_effects": [],
+  "next_trigger": "用户确认范围后继续，不自动后台运行"
+}

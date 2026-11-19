@@ -1,0 +1,46 @@
+{
+  "schema_version": "engineering.implementation-brief/v2",
+  "brief_id": "demo-safe-baseline",
+  "project_id": "demo-lending-station",
+  "status": "proposal_only",
+  "objective": "建立适合维护的安全代码基线",
+  "baseline_refs": [
+    "ev-user-1"
+  ],
+  "reuse_refs": [
+    "ev-user-1"
+  ],
+  "target_paths": [
+    "由实际体检锁定，不代表当前授权路径"
+  ],
+  "changes": [
+    {
+      "action": "核实仓库归属与允许追踪清单；仅获准后做必要初始化与本地提交",
+      "expected_effect": "代码改动可追溯",
+      "side_effects": [
+        "Git元数据和获准文件可能写入"
+      ],
+      "verification": "检查实际根、暂存清单、提交与排除项",
+      "rollback": "保留原文件；不全局reset/clean，不删除原仓库"
+    }
+  ],
+  "out_of_scope": [
+    "远端Push",
+    "真实数据",
+    "全局配置"
+  ],
+  "author": "项目唯一作者",
+  "review_rule": "核对准确变更与敏感/大文件范围",
+  "stop_conditions": [
+    "目录/仓库归属不明",
+    "白名单外改动",
+    "权限拒绝"
+  ],
+  "approval_questions": [
+    "实际根和追踪清单确认后是否批准本地动作？"
+  ],
+  "post_apply_checks": [
+    "以实际结果重新评估版本控制能力"
+  ],
+  "next_recheck": "首次任务收口或仓库结构变更"
+}
