@@ -6,7 +6,7 @@
 
 比如：一个小工具，可能只需要保存代码版本和几条测试；两个 AI 同时改同一份记录，就需要真正防止互相覆盖的代码保护。它不会因为你不懂工程，就给每个项目塞同一套复杂模板。
 
-👉 [给朋友的通俗介绍](docs/FOR_FRIENDS.md) · [下载 candidate.5](https://github.com/futouhaha/engineering-foundation-steward/releases/tag/v0.1.0-candidate.5) · [查看 Skill](skills/engineering-foundation-steward/SKILL.md)
+👉 [给朋友的通俗介绍](docs/FOR_FRIENDS.md) · [下载 candidate.7](https://github.com/futouhaha/engineering-foundation-steward/releases/tag/v0.1.0-candidate.7) · [查看 Skill](skills/engineering-foundation-steward/SKILL.md)
 
 ## 你可能遇到过这些问题
 
@@ -37,7 +37,7 @@
 
 ## 第一次试用：先用虚构项目，只读看建议
 
-1. 在上方版本下载页下载 `engineering-foundation-steward-0.1.0-candidate.5.zip` 并解压。
+1. 在上方版本下载页下载 `engineering-foundation-steward-0.1.0-candidate.7-limited.zip` 并解压。
 2. 找到里面的 `engineering-foundation-steward/SKILL.md`。保留整个文件夹，不要只复制这一份文件。
 3. 在 Codex 提供它的完整路径和一个虚构试用项目的路径，发送：
 
@@ -59,19 +59,15 @@
 
 它是工程基建顾问。你的项目 Main（主要实施助手）仍负责日常任务、代码实施、正式状态与验收。
 
-它不会自动批准、长期调度所有 Agent，也不会靠几份 Markdown 就宣称项目已经安全。没有你的私人全局记忆或某套六文件模板，也可以提供自己的项目资料来使用。
+它不会自动批准、长期调度所有 Agent，也不会靠几份 Markdown 就宣称项目已经安全。设计上使用用户提供的项目资料，不要求私人全局记忆或固定六文件模板；跨用户环境的独立验证仍未完成。
 
 ## 当前版本与验证
 
-**0.1.0-candidate.5，候选预发布版。** 本次 GitHub 上架保持 Skill 内容不变。
+**0.1.0-candidate.7，有限试用候选，非稳定版。** 公共25文件保持锁定内容，GitHub同步不修改Skill。
 
-- 已有80项本地确定性测试通过的开发验证；仓库可复现这些测试。
-- 已进行新上下文的研究工具、多模块项目、高风险方案及普通小改评估。
-- 高风险用户报告经过“只看用户层”的六问模型理解检查和独立定向复核。
-- 上述不等于真实零基础人类试用；人类试用、所有外部环境、完整持续提醒效果仍未全面验证。
-- 测试中提出的业务工程方案，不等于已经在真实项目实施。尤其不能把虚构恢复试验当成真实客户数据恢复保证。
+已有工程咨询及虚构项目实施证据：知识影响后续任务的方案选择、复用与验证；首次接续回写失败，后来在新增有限授权下完成记录一致性修复，并经只读新上下文接手核对。只能称修复后检查通过，不能改称首次自动闭环通过。
 
-想核查细节，见[版本与验证说明](docs/RELEASE_NOTES.md)。反馈可以在 Issues 描述遇到的问题、版本和可公开的虚构复现步骤；请勿上传密钥、客户数据或私人项目内容。
+跨用户环境、真实零基础试读、长期运行和完整持续触发仍未验证。当前仓库的机械测试不能替代模型行为、真人或宿主验证。详见[版本说明](docs/RELEASE_NOTES.md)与[测试说明](docs/VALIDATION.md)。
 
 ## 给想检查代码的朋友
 

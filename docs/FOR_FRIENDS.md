@@ -35,7 +35,7 @@
 
 ## 怎么开始
 
-打开[GitHub 首页](https://github.com/futouhaha/engineering-foundation-steward)，下载 candidate.5，照首页的三步试用方法，把 Skill 路径和一个虚构项目交给 Codex，先要求只读建议。
+打开[GitHub 首页](https://github.com/futouhaha/engineering-foundation-steward)，下载 candidate.7，照首页的三步试用方法，把 Skill 路径和一个虚构项目交给 Codex，先要求只读建议。
 
 你可以这样说：
 
