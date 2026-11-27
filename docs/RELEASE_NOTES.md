@@ -1,17 +1,7 @@
-# 0.1.0-candidate.7 — 有限试用候选
+# 0.1.0-candidate.12.1 · 有限试用 Pre-release
 
-建议标签 `v0.1.0-candidate.7`，Release 标记 Pre-release。此为同步准备，未发布时下载链接可能尚不存在。
+本版将正式项目咨询定型为六模块报告和同范围 Main Brief，保留自然补充需求、首次采用接续和按实质变化复评的工作方式。只读试用无需安装 Hook。旧版 [candidate.7](https://github.com/futouhaha/engineering-foundation-steward/releases/tag/v0.1.0-candidate.7) 与 [candidate.5](https://github.com/futouhaha/engineering-foundation-steward/releases/tag/v0.1.0-candidate.5) 可按原标签取得。
 
-沿用锁定25个公共候选文件与原有limited ZIP，不修改Skill或增加权限。来源开发提交仅作内容溯源标识：`84c634ed7a9d4192243e3ea4d93be7c9c86d7ac7`；它不是本公开发布分支的父提交，不附带开发历史。
+26 个 Skill 文件与冻结包一致。解压后的相对文件名、字节数和摘要见 SKILL_MANIFEST.json，ZIP 与清单摘要见 SHA256SUMS。在仓库根运行 `shasum -a 256 -c SHA256SUMS` 可核对二者。单独下载附件时把 ZIP 放在 dist/ 下，另两份文件放在上级目录即可沿用同一命令。
 
-相对candidate.5，candidate.6/7完善了准确写入权限与状态回写范围的一致性、项目知识的保存/读取/维护/局部失效建议，以及已有能力、调用行为、结果呈现入口和完整用户结果的核对。仍由项目Main实施和维护，不成为长期项目经理。
-
-已有有限工程咨询与合成实施证据。在虚构文本工具中，现行决定替代旧决定、单次观察保留为假设、旧证据限于旧版本，实际影响后续实现与检查；没有建立知识平台或第二账本。
-
-首次新上下文完成了功能和测试，但回写记录失败，接续链当时没有闭合。后来在新增有限授权下，只修复原记录、重跑已有10项测试及两条精确输出断言，再由只读新上下文核对。只能称“修复后的一致性与接手检查通过”，不能抹去首次失败。首次建议还曾自行写出无授权依据的返修次数；实施前明确真实上限，未使用该额外额度。使用者须核对许可来源，建议次数不是批准。
-
-跨用户环境、真实新手、长期运行仍未验证；本轮没有恢复认证或四模式测试。Hook配置、实际触发和Main执行效果须分别取证；项目测试不证明Skill全部脚本或持续治理已验证。
-
-本公开交付只含候选、通用说明与通用测试，不含私人开发报告。旧candidate.5说明见[历史说明](releases/candidate.5.md)，旧远端标签和Release不变。
-
-附件建议：原candidate.7 limited ZIP、SKILL_MANIFEST.json、SHA256SUMS。ZIP含25个候选文件加清单；仓库还含说明与测试，GitHub自动源码归档不是同一个ZIP。显式调用或经批准安装时使用完整Skill子目录。
+已有两个虚构场景的实际报告与只读模型盲读证据，报告由 candidate.12 生成。12.1 调整检查器以识别一种合法的粗体标签写法，并以相同报告复验。[测试与限制](VALIDATION.md)

@@ -3,7 +3,7 @@
   "stage_id": "DEMO-STAGE-01",
   "project_id": "demo-lending-station",
   "status": "proposal_only",
-  "user_outcome": "虚构借用记录保存并在重启后读回",
+  "user_outcome": "Owner 已定目标：虚构借用记录保存并在重启后读回",
   "non_goals": [
     "真实学生资料",
     "公网",
